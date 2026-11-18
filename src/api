@@ -1,0 +1,12 @@
+import { api } from '../api.js';
+
+// Exemplo para carregar a lista de doadores na tela:
+async function carregarListaDoadores() {
+  try {
+    const doadores = await api.getDoadores();
+    console.log("Doadores carregados:", doadores);
+    // Aqui você renderiza os dados no HTML da página
+  } catch (error) {
+    alert("Não foi possível carregar os doadores.");
+  }
+}
